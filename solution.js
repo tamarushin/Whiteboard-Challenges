@@ -1,17 +1,17 @@
 'use strict';
 
-function create (arr){
-  let min = Math.min.apply(null, arr);
-  let max = Math.max.apply(null, arr);
-  let avg = arr.reduce((acc, cur) => {
-    return cur += acc;
-  })/arr.length;
+module.exports = function (arr) {
+  
+  if (!arr) throw new Error('missing array');
 
-return {
-    max: max,
-    min: min,
-    avg: avg
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof (arr[i]) !== 'number') {
+      return null;
+    }
+  }
+  return {
+    max: arr.sort()[arr.length - 1],
+    second: arr.sort()[arr.length - 2]
+
   };
-}
-
-create ([1, 3, 5, 12, 8]);
+};

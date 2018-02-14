@@ -1,9 +1,14 @@
 Requirements
-Write a function that takes in a numeric array and returns an object literal with two properties:
+You're the junior conductor on a commuter train and have been asked by the senior conductor to do a head count of passengers on the train.
 
-the highest value in the array
-the second highest value in the array
-Write at least four tests for this function
+Write a function const traverse = (engine) => {... which takes the engine as a starting location. Travel from the engine to the caboose and total the number of passengers in each car as your progress. return the final total once your traversal is complete.
 
-your tests should cover basic (expected) functionality
-your tests should consider edge cases for your function (ex: will your function still operate on an array of floating point integers?)
+Each car, including the engine will have the following signature:
+
+{ <engine>
+    value: 2,
+    next: {  <next car>
+        value: 16,
+        next: { <next car>
+    }
+}

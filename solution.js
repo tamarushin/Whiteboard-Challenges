@@ -1,15 +1,22 @@
 'use strict';
 
-function findNames(arr1, arr2) {
-  let solutionArr = [];
+function mia(arr) {
+  var maxNum = Math.max.apply(null, arr);
+  var seq = [];
+  var result = [];
 
-  for (var i = 0; i < arr1.length; i++) {
-    for (var k = 0; k < arr2.length; k++) {
-      if (arr1[i] === arr2[k]) solutionArr.push(arr1[i]);
+  for(var i = 1; i <= maxNum; i++) {
+    seq.push(i);
+  }
+  console.log(seq);
+
+  for(var j = 0; j < seq.length; j++) {
+    if(!arr.includes(seq[j])) {
+      result.push(seq[j]);
     }
   }
-
-  return solutionArr; //['sue', 'kathy']
+  console.log(result);
+  return result;
 }
 
-//lots of help on this one. It makes sense now, but I was struggling with execution (still)
+mia([1, 2, 4, 5]);

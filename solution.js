@@ -1,13 +1,15 @@
 'use strict';
 
-//this is a recursive function which means it will run like a loop but without giving it a .length- it will complete once it is finished.
-var count = 0;  //start at 0
+function findNames(arr1, arr2) {
+  let solutionArr = [];
 
-const traverse = (engine) => { //traverse the cars inc. the engine. 
-  count += engine.value; //add value to the count
-  if (engine.next) { //if there is another car
-    traverse (engine.next); //call the function again
-  } else {;//if there are no more cars
-    return count;//return total count
-  };
-};
+  for (var i = 0; i < arr1.length; i++) {
+    for (var k = 0; k < arr2.length; k++) {
+      if (arr1[i] === arr2[k]) solutionArr.push(arr1[i]);
+    }
+  }
+
+  return solutionArr; //['sue', 'kathy']
+}
+
+//lots of help on this one. It makes sense now, but I was struggling with execution (still)

@@ -1,22 +1,19 @@
 'use strict';
 
-function mia(arr) {
-  var maxNum = Math.max.apply(null, arr);
-  var seq = [];
-  var result = [];
+let arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15];
+let missNum;
 
-  for(var i = 1; i <= maxNum; i++) {
-    seq.push(i);
-  }
-  console.log(seq);
+let find = function (arr1) {
+  for (let i = 0; i < arr1.length; i++) {
+    if (i !== arr1[i + 1]) {
+      
+      missNum = i + 1;
 
-  for(var j = 0; j < seq.length; j++) {
-    if(!arr.includes(seq[j])) {
-      result.push(seq[j]);
     }
   }
-  console.log(result);
-  return result;
-}
 
-mia([1, 2, 4, 5]);
+  console.log(missNum);
+  return missNum;
+};
+
+find(arr1);

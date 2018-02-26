@@ -1,16 +1,15 @@
 Requirements
-Create a function that accepts 2 presorted arrays of integers as it's input. Your function should merge these 2 arrays and return a final single sorted array.
-
-Note: The length of either array does not matter. All integers in the array will be whole numbers with a positive value.
+Write a function which accepts n and a linked list as it's input. Your function should return the nth from the last node in the linked list.
 
 For example:
 
 // given:
-[2, 5, 13, 21]
-
-// and:
-[3, 19, 27, 31]
+const ll = new LinkedList();
+findN(ll, 3)
 
 // return:
-[2, 3, 5, 13, 19, 21, 27, 31]
+{
+  val: 'value of the 3rd from last node',
+  next: { ... }
+}
 

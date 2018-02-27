@@ -1,23 +1,20 @@
-'use strict';
+module.exports = function (ll) {
+  if (!ll) throw new Error('expected ll');
+  let node = [];
 
-findnthFromLast(list, nth){
-  let count = 0;
-  let current = list.root;
-  while (current !== null) {
-    current = current.next;
-    count++;
-  }
-  let totalCount = count;
-  console.log('totalcount:', totalCount)
-  count = 0
-  current = list.root;
-  while (current !== null) {
-    if (count === (totalCount - nth)) {
-      return current;
+  let linkList = ll;
+
+  if (linkList.value !== undefined) {
+    node.push(linkList.value);
+    while (linkList.next !== undefined) {
+      linkList = linkList.next;
+      node.push(linkList.value);
     }
-    current = current.next;
-    count++;
   }
-  return undefined;
-}
+
+  for (var i = 0; i < node.length; i++) {
+    if (node[i] !== node[node.length - 1 - i]) return false;
+  }
+
+  return true;
 }

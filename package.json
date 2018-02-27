@@ -1,0 +1,23 @@
+{
+  "name": "Whiteboard-Challenges",
+  "version": "1.0.0",
+  "description": "Requirements Write a function which accepts n and a linked list as it's input. Your function should return the nth from the last node in the linked list.",
+  "main": "solution.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamarushin/Whiteboard-Challenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamarushin/Whiteboard-Challenges/issues"
+  },
+  "homepage": "https://github.com/tamarushin/Whiteboard-Challenges#readme",
+  "devDependencies": {
+    "jest": "^22.4.2"
+  }
+}
